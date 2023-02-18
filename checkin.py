@@ -7,6 +7,7 @@ import os
 url = "https://glados.rocks/api/user/checkin"
 # cookie
 cookie = os.environ["COOKIE"]
+push_plus_token = os.environ["PUSH_PLUS_TOKEN"]
 
 payload = "{\"token\":\"glados.network\"}"
 headers = {
@@ -34,6 +35,8 @@ def do_action():
     print('*******************************************\n')
     print('Result : {message}!  \n'.replace('message',message))
     print('*******************************************')
+    if push_plus_token:
+      requests.request("GET", 'http://www.pushplus.plus/send?template=html&token=' + push_plus_token+ '&title=签到通知&content=' + message, data = payload)
     return result
 
 
