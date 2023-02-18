@@ -36,7 +36,7 @@ def do_action():
     print('Result : {message}!  \n'.replace('message',message))
     print('*******************************************')
     if push_plus_token:
-      requests.request("GET", 'http://www.pushplus.plus/send?template=html&token=' + push_plus_token+ '&title=签到通知&content=' + message, data = payload)
+      requests.request("GET", 'http://www.pushplus.plus/send?template=html&token=' + push_plus_token+ '&title=CheckIn&content=' + message, data = payload)
     return result
 
 
