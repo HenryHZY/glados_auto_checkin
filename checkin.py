@@ -2,6 +2,7 @@
 import logging
 import requests
 import json
+import os
 # url
 url = "https://glados.rocks/api/user/checkin"
 # cookie
