@@ -5,7 +5,7 @@ import json
 # url
 url = "https://glados.rocks/api/user/checkin"
 # cookie
-cookie = 'cooike'
+cookie = os.environ["COOKIE"]
 
 payload = "{\"token\":\"glados.network\"}"
 headers = {
